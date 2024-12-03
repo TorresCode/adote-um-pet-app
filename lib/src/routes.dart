@@ -4,6 +4,7 @@ import 'app/features/auth/presentation/pages/auth_base_page.dart';
 import 'app/features/auth/presentation/pages/login_page.dart';
 import 'app/features/auth/presentation/pages/register_page.dart';
 import 'app/features/auth/presentation/pages/welcome_page.dart';
+import 'app/features/donate/presentation/pages/donate_img_page.dart';
 import 'app/features/donate/presentation/pages/donate_info_page.dart';
 import 'app/features/home/presentation/pages/filters_page.dart';
 import 'app/features/home/presentation/pages/home_page.dart';
@@ -11,10 +12,12 @@ import 'core/features/choose/presentation/choose_page.dart';
 import 'core/features/onboarding/presentation/pages/onboarding_page.dart';
 
 final router = GoRouter(
-  initialLocation: '/onboarding',
+  initialLocation: '/',
   routes: [
     GoRoute(
-      path: '/onboarding',
+      path: '/',
+      //path: '/donate-info',
+      //builder: (context, state) => const DonateInfoPage(),
       builder: (context, state) => const OnboardingPage(),
     ),
     GoRoute(
@@ -50,6 +53,10 @@ final router = GoRouter(
     GoRoute(
       path: '/donate-info',
       builder: (context, state) => const DonateInfoPage(),
+    ),
+    GoRoute(
+      path: '/donate-img',
+      builder: (context, state) => const DonateImgPage(),
     ),
   ],
 );
